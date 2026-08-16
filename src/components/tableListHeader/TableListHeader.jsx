@@ -1,3 +1,4 @@
+import TableCellHeader from "../tableCellHeader/TableCellHeader.jsx";
 function TableListHeader() {
   const tableHeaders = [
     { firstName: "First Name" },
@@ -14,13 +15,7 @@ function TableListHeader() {
     <thead>
       <tr>
         {tableHeaders.map((header, index) => (
-          <th key={index}>
-            {Object.values(header)[0]}{" "}
-            <span className="sort-arrows">
-              <span>▲</span>
-              <span>▼</span>
-            </span>
-          </th>
+          <TableCellHeader key={index} header={header} index={index} />
         ))}
       </tr>
     </thead>
