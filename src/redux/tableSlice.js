@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { filterList } from "../utils/filterList.js";
+import { filterList, sortList } from "../utils/utils.js";
 
 const initialState = {
   list: [
@@ -191,6 +191,7 @@ const tableSlice = createSlice({
     },
     setSortConfig: (state, action) => {
       state.sortConfig = action.payload;
+      state.list = sortList(state.list, action.payload);
     },
   },
 });

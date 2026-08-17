@@ -15,7 +15,7 @@ function TableListHeader() {
     <thead>
       <tr>
         {tableHeaders.map((header, index) => (
-          <TableCellHeader key={index} header={header} index={index} />
+          <TableCellHeader key={index} header={header} />
         ))}
       </tr>
     </thead>
