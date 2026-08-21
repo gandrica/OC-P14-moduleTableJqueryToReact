@@ -1,17 +1,28 @@
+import { useDispatch } from "react-redux";
+
+import { setList } from "../../redux/tableSlice.js";
+
 import Entries from "../entries/Entries";
 import SearchBar from "../searchBar/SearchBar";
 import TableList from "../tableList/TableList";
 import EntriesDisplay from "../entriesDisplay/EntriesDisplay";
 import Pagination from "../pagination/Pagination";
+import styles from "./TableCore.module.scss";
 
-function TableCore() {
+function TableCore({ list }) {
+  const dispatch = useDispatch();
+  dispatch(setList(list));
   return (
     <>
-      <Entries />
-      <SearchBar />
+      <div className={styles.tableHeader}>
+        <Entries />
+        <SearchBar />
+      </div>
       <TableList />
-      <EntriesDisplay />
-      <Pagination />
+      <div className={styles.tableFooter}>
+        <EntriesDisplay />
+        <Pagination />
+      </div>
     </>
   );
 }

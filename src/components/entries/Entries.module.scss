@@ -1,0 +1,17 @@
+.entriesControl {
+  /* Utilisation d'une police avec empattement pour correspondre à l'image */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000;
+  select {
+    font-family: inherit;
+    font-size: inherit;
+    /* Bordure épaisse et légèrement arrondie pour correspondre au style du menu déroulant */
+    border: 2px solid #000;
+    border-radius: 4px;
+    padding: 1px 4px;
+    margin: 0 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

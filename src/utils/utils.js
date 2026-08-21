@@ -28,3 +28,13 @@ export const sortList = (list, sortConfig) => {
     return 0;
   });
 };
+
+export const sliceList = (list, entryIndex, entriesPerPage) => {
+  if (!Array.isArray(list)) {
+    return [];
+  }
+  const startIndex = Math.max(0, entryIndex);
+  const endIndex = startIndex + entriesPerPage;
+
+  return list.slice(startIndex, endIndex);
+};

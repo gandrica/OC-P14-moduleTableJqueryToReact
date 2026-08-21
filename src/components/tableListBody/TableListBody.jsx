@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux";
-
 function TableListBody() {
   const tableListBody = useSelector((state) => state.table.list);
-  console.log("tableListBody", tableListBody);
   return (
     <tbody>
       {tableListBody.map((row, index) => (
