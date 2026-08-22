@@ -31,7 +31,7 @@ const tableSlice = createSlice({
       state.entriesPerPage = action.payload;
       state.list = sliceList(
         state.initialList,
-        state.currentPage - 1,
+        state.currentPage,
         state.entriesPerPage,
       );
     },
